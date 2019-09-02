@@ -4,6 +4,7 @@ from django import forms
 
 import api.photo_validator_dir  as photo_validator_dir
 from django.http import HttpResponse
+import api.file_format_check as file_format_check
 import os
 from onlinePhotoValidator.settings import BASE_DIR
 
@@ -21,28 +22,10 @@ def startPage(request):
     return render(request, 'api/index1.html', context)
 
 def upload(request):
-    # print("here")
-    # print(request.POST.get('data'))
-    a= request.POST
-    print(a)
 
-    f = request.FILES['file']
+    photo_validator_dir.main(request.POST['path'])
 
-    print("aa"+ str(f))
-    # form = NameForm(request.POST)
-    #
-    # print(form.is_valid())
-    #
-    # print(f)
-    #
-    # # with open(request.FILES['file'].name, 'wb+') as destination:
-    # #     for chunk in f.chunks():
-    # #         destination.write(chunk)
-
-    photo_validator_dir.main()
-
-
-    return HttpResponse("test")
+    return HttpResponse("Photo Validation Completed")
 
 
 

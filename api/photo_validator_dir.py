@@ -14,21 +14,18 @@ import time
 
 logging.basicConfig(level=logging.INFO)
 
-def main():
+absolute_path = "/home/yashasvi/"
+
+def main(path):
     initialTime = time.time()
-    ap = argparse.ArgumentParser()
-    ap.add_argument('-d', '--directory', required=True, help='Path to directory containing images')
 
-    # Read the directory path from the argument
-    # args = vars(ap.parse_args())
-    #
-    directory = "/home/yashasvi/opencv/Online-Photo-Validator/images"
+    directory = absolute_path + path
 
-    fileLists= sorted(os.listdir("/home/yashasvi/opencv/Online-Photo-Validator/images"))
+    fileLists= sorted(os.listdir(directory))
 
     error_message = {}
     for image in fileLists:
-        #logging.info("processing Image: " + image)
+        logging.info("processing Image: " + image)
 
         messages = []
 
@@ -94,7 +91,7 @@ def main():
     else:
         print("There are no invalid images")
 
-    f = open('/home/yashasvi/opencv/Online-Photo-Validator/images/' + 'csvfile.csv', 'w')
+    f = open(directory + '/result.csv', 'w')
     f.write(csv_string)  # Give your csv text here.
     ## Python will convert \n to os.linesep
     f.close()

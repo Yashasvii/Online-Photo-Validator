@@ -25,6 +25,15 @@
     <script src="{% static 'api/js/jquer.js' %}"></script>
 
     <script>
+        var relativePath = "";
+
+        function selectFolder(e) {
+            var theFiles = e.target.files;
+            relativePath = theFiles[0].webkitRelativePath;
+
+            relativePath  = relativePath.split("/")[0]
+        }
+
    $(document).ready(function () {
 
 
@@ -40,6 +49,8 @@
 
 		// Create an FormData object
         var data = new FormData(form);
+
+        data.append("path",relativePath);
 
 		// If you want to add an extra field for the FormData
         //data.append("CustomField", "This is some extra data, testing");
@@ -103,7 +114,7 @@
                 <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
                     {% csrf_token %}
 
-                    <input type="file" name="file" id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>
+                    <input type="file" name="file" onchange="selectFolder(event)"  id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>
 
 
                     <input type="button" value="Submit" id="btnSubmit"/>
