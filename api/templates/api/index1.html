@@ -2,34 +2,32 @@
 <html lang="en">
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-{% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% load static %}
 
-  <title> Online Photo Validator </title>
+    <title> Online Photo Validator </title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="{% static 'api/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'api/css/bootstrap.css' %}" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
-  <link href="{%static 'api/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-  <link href="{%static 'api/css/font1.css' %}" rel="stylesheet">
-  <link href="{%static 'api/css/font2.css' %}" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'api/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'api/css/font1.css' %}" rel="stylesheet">
+    <link href="{% static 'api/css/font2.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
 
-  <!-- Custom styles for this template -->
-  <link href="{%static 'api/css/grayscale.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'api/css/grayscale.css' %}" rel="stylesheet">
 
-  <script src="{% static 'api/js/jquer.js' %}"></script>
+    <script src="{% static 'api/js/jquer.js' %}"></script>
 
     <script>
    $(document).ready(function () {
 
-    $("button").click(function(){
-    $("p").hide();
-  });
+
 
     $("#btnSubmit").click(function (event) {
                     $("#result").text("Processing...");
@@ -44,7 +42,7 @@
         var data = new FormData(form);
 
 		// If you want to add an extra field for the FormData
-        data.append("CustomField", "This is some extra data, testing");
+        //data.append("CustomField", "This is some extra data, testing");
 
 		// disabled the submit button
         $("#btnSubmit").prop("disabled", true);
@@ -52,7 +50,7 @@
         $.ajax({
             type: "POST",
             enctype: 'multipart/form-data',
-            url: "/mult/",
+            url: "/upload/",
             data: data,
             processData: false,
             contentType: false,
@@ -67,9 +65,9 @@
             },
             error: function (e) {
 
-                $("#result").text(e.responseText);
-                console.log("ERROR : ", e);
-                $("#btnSubmit").prop("disabled", false);
+                {#$("#result").text(e.responseText);#}
+                {#console.log("ERROR : ", e);#}
+                {#$("#btnSubmit").prop("disabled", false);#}
 
             }
         });
@@ -81,99 +79,64 @@
 
 </head>
 
+ <!-- Header -->
+
+
 <body id="page-top">
 
+<section id="about" class="about-section text-center">
 
-  <!-- About Section -->
-
-<!--<h1>Ajax Post Result</h1>-->
-
-  <section id="about" class="about-section text-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-
-
-             <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
-                   {% csrf_token %}
-
- <input type="file"  name="file" id="file"><br/><br/>
-                 <input type="file" webkitdirectory directory multiple/>
-<!--    <input type="file" name="files"/><br/><br/>-->
-
-               <p id="para">Drag your files here or click in this area.</p>-->
-<!--               <img id="output" width="200" />-->
-    <input type="button" value="Submit" id="btnSubmit"/>
-
-<!--<button type="submit"  id="submit" value="Submit" >Upload</button>-->
-<!--                           <button onclick="loadDoc()" id="button">Upload</button>-->
-          </form>
-<br/> <br/>
-          <span id="result"   style="color:#7353B2 ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px;"></span>
-
-
-<!--<br/><br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-<!--<br/>-->
-
-
-
-        </div>
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Photo Validator</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Online Photo Validation System</h2>
       </div>
-      <img src="{% static 'api/img/ipad.png'  %}" class="img-fluid" alt="">
     </div>
+    <br/>
+    <br/>
 
-<!--  <form method="POST">-->
-<!--            {% csrf_token %}-->
-<!--            <button type="submit"  id="submit" value="Submit" >Upload</button>-->
-<!--          </form>-->
-
-  </section>
-<!--  <span id="result"></span>-->
-
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+
+
+                <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
+                    {% csrf_token %}
+
+                    <input type="file" name="file" id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>
+
+
+                    <input type="button" value="Submit" id="btnSubmit"/>
+
+
+                </form>
+                <br/> <br/>
+                <span id="result"
+                      style="color:red ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:xx-large"></span>
 
 
 
+            </div>
+        </div>
 
     </div>
-  </section>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'api/vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'api/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="{% static 'api/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="{% static 'api/js/grayscale.min.js' %}"></script>
+</section>
 
 
 
-    <script  src="{% static 'api/js/script.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'api/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'api/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{% static 'api/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{% static 'api/js/grayscale.min.js' %}"></script>
+
+
+<script src="{% static 'api/js/script.js' %}"></script>
 
 </body>
 
