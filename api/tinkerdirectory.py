@@ -1,10 +1,10 @@
 import tkinter
 from tkinter import filedialog
-
-
+import os
 
 def opendialog():
    root = tkinter.Tk()
    root.withdraw()
-   dirname = tkinter.filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
+   currdir = os.getcwd()
+   dirname = tkinter.filedialog.askdirectory(parent=root,initialdir=currdir,title='Please select a directory')
    return dirname

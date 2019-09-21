@@ -24,7 +24,7 @@ def startPage(request):
     return render(request, 'api/index1.html', context)
 
 def process_image(request):
-    print("aa",request.POST['path'])
+
     photo_validator_dir.main(request.POST['path'])
 
     return HttpResponse("Photo Validation Completed")
