@@ -55,6 +55,7 @@
                     success: function (data) {
 
                         filePath = data;
+                        $("#selectedFolder").text("Selected folder: "+ data + "/");
                     },
                     error: function (e) {
 
@@ -143,8 +144,11 @@
                     {% csrf_token %}
 
                     <!--  <input type="file" name="file" onchange="selectFolder(event)"  id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>  -->
+
                     <input type="button" name="file" value="Choose File" id="uploadFolder">
                     <br/>
+                    <span id="selectedFolder"
+                      style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:small"></span>
                     <br/>
                     <input type="button" value="Submit" id="btnSubmit"/>
 
