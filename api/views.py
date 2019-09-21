@@ -4,6 +4,7 @@ from django import forms
 
 import api.photo_validator_dir  as photo_validator_dir
 from django.http import HttpResponse
+import logging
 
 import api.tinkerdirectory as tinker
 import api.file_format_check as file_format_check
@@ -25,7 +26,12 @@ def startPage(request):
 
 def process_image(request):
 
-    photo_validator_dir.main(request.POST['path'])
+    #print(request.POST)
+
+    path = request.POST['path']
+
+    logging.info("Validating images from path: " + path)
+    photo_validator_dir.main(path)
 
     return HttpResponse("Photo Validation Completed")
 

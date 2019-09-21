@@ -40,3 +40,12 @@ font-family: 'Varela Round';
   transition: all .2s ease;
   outline: none;
 }
+
+
+#uploadFolder{
+
+  font-weight: bold;
+
+   margin-top:100px;
+
+}

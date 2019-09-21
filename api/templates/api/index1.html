@@ -25,108 +25,100 @@
     <script src="{% static 'api/js/jquer.js' %}"></script>
 
     <script>
-        var relativePath = "";
-        var filePath="";
-
-        function selectFolder(e) {
-            var theFiles = e.target.files;
-            relativePath = theFiles[0].webkitRelativePath;
-
-            relativePath  = relativePath.split("/")[0]
-        }
-
-   $(document).ready(function () {
+        var filePath = "";
 
 
+        $(document).ready(function () {
 
-    $("#btnSubmit").click(function (event) {
-                    $("#result").text("Processing...");
+            $("#uploadFolder").click(function (event) {
 
-        //stop submit the form, we will post it manually.
-        event.preventDefault();
+                //stop submit the form, we will post it manually.
+                event.preventDefault();
 
-        // Get form
-        var form = $('#fileUploadForm')[0];
+                // Get form
+                var form = $('#fileUploadForm')[0];
 
-		// Create an FormData object
-        var data = new FormData(form);
+                // Create an FormData object
+                var data = new FormData(form);
 
-        data.append("path",relativePath);
+                data.append("info", "");
 
-		// If you want to add an extra field for the FormData
-        //data.append("CustomField", "This is some extra data, testing");
+                $.ajax({
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/dialogueBox/",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    success: function (data) {
 
-		// disabled the submit button
-        $("#btnSubmit").prop("disabled", true);
+                        filePath = data;
+                    },
+                    error: function (e) {
 
-        $.ajax({
-            type: "POST",
-            enctype: 'multipart/form-data',
-            url: "/upload/",
-            data: data,
-            processData: false,
-            contentType: false,
-            cache: false,
-            timeout: 600000,
-            success: function (data) {
+                    }
+                });
 
-                $("#result").text(data);
-                console.log("SUCCESS : ", data);
-                $("#btnSubmit").prop("disabled", false);
+            });
 
-            },
-            error: function (e) {
+            $("#btnSubmit").click(function (event) {
+                $("#result").text("Processing...");
 
-                {#$("#result").text(e.responseText);#}
-                {#console.log("ERROR : ", e);#}
-                {#$("#btnSubmit").prop("disabled", false);#}
+                //stop submit the form, we will post it manually.
+                event.preventDefault();
 
-            }
+                // Get form
+                var form = $('#fileUploadForm')[0];
+
+                // Create an FormData object
+                var data = new FormData(form);
+
+                data.append("path", filePath);
+                data.append("aa", "bb");
+
+                // If you want to add an extra field for the FormData
+                //data.append("CustomField", "This is some extra data, testing");
+
+                // disabled the submit button
+
+                $("#btnSubmit").prop("disabled", true);
+
+                $.ajax({
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/upload/",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    success: function (data) {
+
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#btnSubmit").prop("disabled", false);
+
+                    },
+                    error: function (e) {
+
+                        {#$("#result").text(e.responseText);#}
+                        {#console.log("ERROR : ", e);#}
+                        {#$("#btnSubmit").prop("disabled", false);#}
+
+                    }
+                });
+
+            });
+
+
         });
-
-    });
-
-    $("#uploadFolder").click(function (event) {
-
-        //stop submit the form, we will post it manually.
-        event.preventDefault();
-
-        // Get form
-        var form = $('#fileUploadForm')[0];
-
-		// Create an FormData object
-        var data = new FormData(form);
-
-        data.append("info","");
-
-        $.ajax({
-            type: "POST",
-            enctype: 'multipart/form-data',
-            url: "/dialogueBox/",
-            data: data,
-            processData: false,
-            contentType: false,
-            cache: false,
-            timeout: 600000,
-            success: function (data) {
-
-               filePath =data;
-               alert(filePath)
-            },
-            error: function (e) {
-
-            }
-        });
-
-    });
-
-
-});
-  </script>
+    </script>
 
 </head>
 
- <!-- Header -->
+<!-- Header -->
 
 
 <body id="page-top">
@@ -134,10 +126,10 @@
 <section id="about" class="about-section text-center">
 
     <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Photo Validator</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">Online Photo Validation System</h2>
-      </div>
+        <div class="mx-auto text-center">
+            <h1 class="mx-auto my-0 text-uppercase">Photo Validator</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Online Photo Validation System</h2>
+        </div>
     </div>
     <br/>
     <br/>
@@ -150,8 +142,10 @@
                 <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
                     {% csrf_token %}
 
-                  <!--  <input type="file" name="file" onchange="selectFolder(event)"  id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>  -->
-                    <input type="button" name="file"  id="uploadFolder" >
+                    <!--  <input type="file" name="file" onchange="selectFolder(event)"  id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>  -->
+                    <input type="button" name="file" value="Choose File" id="uploadFolder">
+                    <br/>
+                    <br/>
                     <input type="button" value="Submit" id="btnSubmit"/>
 
 
@@ -161,14 +155,12 @@
                       style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:xx-large"></span>
 
 
-
             </div>
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- Bootstrap core JavaScript -->
