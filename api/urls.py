@@ -9,7 +9,8 @@ def redirect_root(request):
 
 urlpatterns = [
     path('photoValidator/', views.startPage, name='photoValidator'),
-    path('upload/', views.upload, name='upload'),
+    path('upload/', views.process_image, name='upload'),
+    path('dialogueBox/', views.dialogueBox, name='dialogueBox'),
     path('', redirect_root),
 
 

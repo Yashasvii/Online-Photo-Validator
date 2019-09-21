@@ -4,6 +4,8 @@ from django import forms
 
 import api.photo_validator_dir  as photo_validator_dir
 from django.http import HttpResponse
+
+import api.tinkerdirectory as tinker
 import api.file_format_check as file_format_check
 import os
 from onlinePhotoValidator.settings import BASE_DIR
@@ -21,11 +23,15 @@ def startPage(request):
 
     return render(request, 'api/index1.html', context)
 
-def upload(request):
-
+def process_image(request):
+    print("aa",request.POST['path'])
     photo_validator_dir.main(request.POST['path'])
 
     return HttpResponse("Photo Validation Completed")
 
+def dialogueBox(request):
+    folderpath = tinker.opendialog()
+
+    return HttpResponse(folderpath)
 
 
