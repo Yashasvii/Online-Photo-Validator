@@ -18,21 +18,29 @@ logging.basicConfig(level=logging.INFO)
 def main(directory):
     initialTime = time.time()
 
-    fileLists = sorted(os.listdir(directory))
-
     # make valid and invalid directories
     validDirectory = directory + "/" + "valid/"
     invalidDirectory = directory + "/" + "invalid/"
-    os.mkdir(validDirectory)
-    os.mkdir(invalidDirectory)
+    resultFile = directory + '/result.csv'
+
+    if  not os.path.exists(validDirectory):
+         os.mkdir(validDirectory)
+    if not os.path.exists(invalidDirectory):
+        os.mkdir(invalidDirectory)
+    if os.path.exists(resultFile):
+        os.remove(resultFile)
 
     error_message = {}
+    fileLists = sorted(os.listdir(directory))
     for image in fileLists:
         logging.info("processing Image: " + image)
 
         messages = []
 
         imagePath = directory + "/" + image
+
+        if  os.path.isdir(imagePath):
+            continue
 
         # Check image file format
         is_file_format_valid = file_format_check.check_image(imagePath)
@@ -100,7 +108,7 @@ def main(directory):
     else:
         print("There are no invalid images")
     logging.info("Writing result to result.csv... ")
-    f = open(directory + '/result.csv', 'w')
+    f = open(resultFile, 'w')
     f.write(csv_string)  # Give your csv text here.
     ## Python will convert \n to os.linesep
     f.close()
