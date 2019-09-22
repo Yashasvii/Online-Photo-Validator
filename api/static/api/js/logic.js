@@ -1,4 +1,5 @@
     var filePath = "";
+    var type = ""
 
 
         $(document).ready(function () {
@@ -8,6 +9,8 @@
                 //stop submit the form, we will post it manually.
                 event.preventDefault();
 
+                $("#uploadFolder").prop("disabled", true);
+
                 // Get form
                 var form = $('#fileUploadForm')[0];
 
@@ -16,6 +19,17 @@
 
                 data.append("info", "");
 
+                var selectedValue =  $('#categoryDropDown').find("option:selected").val();
+
+                 if(selectedValue === "folder"){
+                    data.append("type","folder");
+                    type="folder"
+                }
+
+                 else{
+                     data.append("type","file");
+                     type="file"
+                 }
                 $.ajax({
                     type: "POST",
                     enctype: 'multipart/form-data',
@@ -28,10 +42,12 @@
                     success: function (data) {
 
                         filePath = data;
+                          $("#uploadFolder").prop("disabled", false);
+                              $("#btnSubmit").prop("disabled", false);
                         $("#selectedFolder").text("Selected folder: " + data + "/");
                     },
                     error: function (e) {
-
+                          $("#uploadFolder").prop("disabled", false);
                     }
                 });
 
@@ -49,8 +65,11 @@
                 // Create an FormData object
                 var data = new FormData(form);
 
+
                 data.append("path", filePath);
-                data.append("aa", "bb");
+
+
+                data.append("type", type);
 
                 // If you want to add an extra field for the FormData
                 //data.append("CustomField", "This is some extra data, testing");
@@ -70,6 +89,9 @@
                     timeout: 600000,
                     success: function (data) {
 
+                        if(type === "file")
+                             $("#result").css("font-size","small");
+
                         $("#result").text(data);
                         console.log("SUCCESS : ", data);
                         $("#btnSubmit").prop("disabled", false);
@@ -85,6 +107,12 @@
                 });
 
             });
+
+//             $('#SpaceAccommodation').change(function () {
+//     var selectedText = $(this).find("option:selected").text();
+//
+//     $("").text(selectedText);
+// });
 
 
         });

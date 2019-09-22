@@ -52,12 +52,17 @@
 
                     <!--  <input type="file" name="file" onchange="selectFolder(event)"  id="uploadFolder" webkitdirectory mozdirectory/><br/><br/>  -->
 
+                    <select class="form-control" id="categoryDropDown" name="">
+                        <option value="folder">Validate whole folder</option>
+                        <option value="file">Validate an image</option>
+                    </select>
+
                     <input type="button" name="file" value="Choose File" id="uploadFolder">
                     <br/>
                     <span id="selectedFolder"
                           style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:small"></span>
                     <br/>
-                    <input type="button" value="Submit" id="btnSubmit"/>
+                    <input type="button" value="Submit" id="btnSubmit" disabled/>
 
 
                 </form>

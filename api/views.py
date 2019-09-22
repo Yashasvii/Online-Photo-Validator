@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django import forms
 
 import api.photo_validator_dir  as photo_validator_dir
+import api.photo_validator as photo_validator
 from django.http import HttpResponse
 import logging
 
@@ -29,14 +30,20 @@ def process_image(request):
     #print(request.POST)
 
     path = request.POST['path']
+    type = request.POST['type']
+
+    message=""
 
     logging.info("Validating images from path: " + path)
-    photo_validator_dir.main(path)
-
-    return HttpResponse("Photo Validation Completed")
+    if type == 'folder':
+      photo_validator_dir.main(path)
+      return HttpResponse("Photo Validation Completed")
+    else:
+      message = photo_validator.main(path)
+      return HttpResponse("Results:" + "<br/>" + message)
 
 def dialogueBox(request):
-    folderpath = tinker.opendialog()
+    folderpath = tinker.opendialogForDirectory(request.POST['type'])
 
     return HttpResponse(folderpath)
 
