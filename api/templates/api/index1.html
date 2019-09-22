@@ -24,99 +24,6 @@
 
     <script src="{% static 'api/js/jquer.js' %}"></script>
 
-    <script>
-        var filePath = "";
-
-
-        $(document).ready(function () {
-
-            $("#uploadFolder").click(function (event) {
-
-                //stop submit the form, we will post it manually.
-                event.preventDefault();
-
-                // Get form
-                var form = $('#fileUploadForm')[0];
-
-                // Create an FormData object
-                var data = new FormData(form);
-
-                data.append("info", "");
-
-                $.ajax({
-                    type: "POST",
-                    enctype: 'multipart/form-data',
-                    url: "/dialogueBox/",
-                    data: data,
-                    processData: false,
-                    contentType: false,
-                    cache: false,
-                    timeout: 600000,
-                    success: function (data) {
-
-                        filePath = data;
-                        $("#selectedFolder").text("Selected folder: "+ data + "/");
-                    },
-                    error: function (e) {
-
-                    }
-                });
-
-            });
-
-            $("#btnSubmit").click(function (event) {
-                $("#result").text("Processing...");
-
-                //stop submit the form, we will post it manually.
-                event.preventDefault();
-
-                // Get form
-                var form = $('#fileUploadForm')[0];
-
-                // Create an FormData object
-                var data = new FormData(form);
-
-                data.append("path", filePath);
-                data.append("aa", "bb");
-
-                // If you want to add an extra field for the FormData
-                //data.append("CustomField", "This is some extra data, testing");
-
-                // disabled the submit button
-
-                $("#btnSubmit").prop("disabled", true);
-
-                $.ajax({
-                    type: "POST",
-                    enctype: 'multipart/form-data',
-                    url: "/upload/",
-                    data: data,
-                    processData: false,
-                    contentType: false,
-                    cache: false,
-                    timeout: 600000,
-                    success: function (data) {
-
-                        $("#result").text(data);
-                        console.log("SUCCESS : ", data);
-                        $("#btnSubmit").prop("disabled", false);
-
-                    },
-                    error: function (e) {
-
-                        {#$("#result").text(e.responseText);#}
-                        {#console.log("ERROR : ", e);#}
-                        {#$("#btnSubmit").prop("disabled", false);#}
-
-                    }
-                });
-
-            });
-
-
-        });
-    </script>
-
 </head>
 
 <!-- Header -->
@@ -148,7 +55,7 @@
                     <input type="button" name="file" value="Choose File" id="uploadFolder">
                     <br/>
                     <span id="selectedFolder"
-                      style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:small"></span>
+                          style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:small"></span>
                     <br/>
                     <input type="button" value="Submit" id="btnSubmit"/>
 
@@ -178,7 +85,7 @@
 <script src="{% static 'api/js/grayscale.min.js' %}"></script>
 
 
-<script src="{% static 'api/js/script.js' %}"></script>
+ <script src="{% static 'api/js/logic.js' %}"></script>
 
 </body>
 
