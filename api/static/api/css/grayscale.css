@@ -167,9 +167,14 @@
 }
 
 .about-section {
-  padding-top: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  padding-top: 5rem;
+  /*background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(255, 255, 255, 0.8)));*/
+  /*background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(255, 255, 255, 0.8) 100%);*/
+    background: -webkit-linear-gradient(top, rgba(22, 22, 22, 0.9) 80%, white 20%);
+      background: -moz-linear-gradient(top, rgba(22, 22, 22, 0.9) 80%, white 20%);
+      background: -ms-linear-gradient(top,  rgba(22, 22, 22, 0.9) 80%, white 20%);
+      background: linear-gradient(top, black 80%, white 50%);
+
 }
 
 .about-section p {

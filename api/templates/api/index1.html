@@ -29,18 +29,15 @@
 <!-- Header -->
 
 
-<body id="page-top">
-
-<section id="about" class="about-section text-center">
+<body id="page-top" class="about-section text-center">
 
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-            <h1 class="mx-auto my-0 text-uppercase">Photo Validator</h1>
+{#            <h1 class="mx-auto my-0 text-uppercase">Photo Validator</h1>#}
             <h2 class="text-white-50 mx-auto mt-2 mb-5">Online Photo Validation System</h2>
         </div>
     </div>
-    <br/>
-    <br/>
+
 
     <div class="container">
         <div class="row">
@@ -59,25 +56,25 @@
 
                     <input type="button" name="file" value="Choose File" id="uploadFolder">
                     <br/>
-                    <span id="selectedFolder"
-                          style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:small"></span>
                     <br/>
+                    <br/>
+
+                    <span id="selectedFolderText"></span>
+
+                    <br/>
+
                     <input type="button" value="Submit" id="btnSubmit" disabled/>
 
-
                 </form>
-                <br/> <br/>
+
                 <span id="result"
-                      style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round'; margin-top: 30px; font-size:xx-large"></span>
+                      style="color:rgba(255, 255, 255, 0.5) ;font-weight:bold;  font-family: 'Varela Round';  font-size:xx-large"></span>
 
 
             </div>
         </div>
 
     </div>
-
-</section>
-
 
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'api/vendor/jquery/jquery.min.js' %}"></script>

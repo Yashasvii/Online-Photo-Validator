@@ -44,7 +44,7 @@
                         filePath = data;
                           $("#uploadFolder").prop("disabled", false);
                               $("#btnSubmit").prop("disabled", false);
-                        $("#selectedFolder").html("Selected folder: " + data + "/").wrap('<pre />');;
+                        $("#selectedFolderText").html(data + "/").wrap('<pre />');;
                     },
                     error: function (e) {
                           $("#uploadFolder").prop("disabled", false);
