@@ -40,7 +40,7 @@ def process_image(request):
       return HttpResponse("Photo Validation Completed")
     else:
       message = photo_validator.main(path)
-      return HttpResponse("Results:" + "<br/>" + message)
+      return HttpResponse("Results:" + "\n" + message)
 
 def dialogueBox(request):
     folderpath = tinker.opendialogForDirectory(request.POST['type'])

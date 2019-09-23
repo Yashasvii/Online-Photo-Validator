@@ -44,7 +44,7 @@
                         filePath = data;
                           $("#uploadFolder").prop("disabled", false);
                               $("#btnSubmit").prop("disabled", false);
-                        $("#selectedFolder").text("Selected folder: " + data + "/");
+                        $("#selectedFolder").html("Selected folder: " + data + "/").wrap('<pre />');;
                     },
                     error: function (e) {
                           $("#uploadFolder").prop("disabled", false);
@@ -54,7 +54,7 @@
             });
 
             $("#btnSubmit").click(function (event) {
-                $("#result").text("Processing...");
+                $("#result").html("Processing..").wrap('<pre />');
 
                 //stop submit the form, we will post it manually.
                 event.preventDefault();
@@ -92,7 +92,7 @@
                         if(type === "file")
                              $("#result").css("font-size","small");
 
-                        $("#result").text(data);
+                        $("#result").html(data).wrap('<pre />');;
                         console.log("SUCCESS : ", data);
                         $("#btnSubmit").prop("disabled", false);
 
