@@ -33,7 +33,7 @@ font-family: 'Varela Round';
 
 #uploadFolder{
   font-weight: bold;
-  margin-top:8%;
+  margin-top:11%;
   margin-left: 1%;
 
 
@@ -47,7 +47,6 @@ font-family: 'Varela Round';
 }
 
 #categoryDropDown{
-  margin-top: 10%;
   margin-left: 25%;
   font-weight: bold;
 }
