@@ -4,6 +4,15 @@
 
         $(document).ready(function () {
 
+
+        $('#categoryDropDown').change(function () {
+            if ($(this).find("option:selected").val() === 'folder') {
+                $('#uploadFolder').prop("value", "Choose Folder")
+            } else {
+                $('#uploadFolder').prop("value", "Choose File ")
+            }
+        });
+
             $("#uploadFolder").click(function (event) {
 
                 //stop submit the form, we will post it manually.
@@ -90,7 +99,7 @@
                     success: function (data) {
 
                         if(type === "file")
-                             $("#result").css("font-size","small");
+                             $("#result").css("font-size","medium");
 
                         $("#result").html(data).wrap('<pre />');;
                         console.log("SUCCESS : ", data);
