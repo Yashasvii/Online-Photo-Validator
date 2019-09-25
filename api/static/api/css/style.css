@@ -66,3 +66,12 @@ html, section {
     height: 100%;
 }
 
+
+
+.simple-text{
+  color:rgba(255, 255, 255, 0.5) ;
+  font-weight:bold;
+  font-size: medium;
+ ;
+}
+
