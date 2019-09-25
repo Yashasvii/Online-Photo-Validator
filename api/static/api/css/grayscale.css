@@ -173,7 +173,7 @@
     background: -webkit-linear-gradient(top, rgba(22, 22, 22, 0.9) 80%, white 20%);
       background: -moz-linear-gradient(top, rgba(22, 22, 22, 0.9) 80%, white 20%);
       background: -ms-linear-gradient(top,  rgba(22, 22, 22, 0.9) 80%, white 20%);
-      background: linear-gradient(top, black 80%, white 50%);
+      background: linear-gradient(top, black 80%, white 20%);
 
 }
 
