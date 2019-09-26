@@ -57,6 +57,15 @@ margin-left:-30%
   margin-left:50%;
 }
 
+#othersFormat {
+  margin-left:13%
+}
+
+#othersFormatText{
+   margin-left:15%
+}
+
+
 #uploadFolder{
   font-weight: bold;
   margin-top:11%;
