@@ -93,57 +93,71 @@
                             <h2 class="text-white-50 mx-auto mt-2 mb-5">Online Photo Validation System</h2>
                         </div>
                     </div>
-                    <span class="simple-text">Height(in Pixel)</span>
-                    <br/>
-                    <span class="simple-text">Minimum</span>
 
-                    <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <div id="allowedFormat">
+                        <span class="simple-text">Allowed Formats</span>
+                        <br/>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label simple-text" for="exampleCheck1">JPG</label>
+                            <br/>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label simple-text" for="exampleCheck1">PNG</label>
+                            <br/><br/> <br/>
+                            <span class="simple-text">Others(Please Specify)</span>
+                            <br/>
+                            <input type="text">
+                            <br/><br/> <br/>
+                        </div>
+                    </div>
 
-                    <span class="simple-text">Maximum</span>
+                    <div id="configInput">
+                    <div id="heightConfig">
+                        <span class="simple-text">Height(in Pixel)</span>
+                        <br/>
+                        <span class="simple-text">Minimum</span>
 
-                    <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10"/>
 
-                      <br/><br/> <br/>
-                    <span class="simple-text">Width(in Pixel)</span>
-                    <br/>
+                        <span class="simple-text">Maximum</span>
 
-                    <span class="simple-text">Minimum</span>
 
-                    <input type="number" value="500" min="0" max="1000" step="10"/>
-
-                    <span class="simple-text">Maximum</span>
-
-                    <input type="number" value="500" min="0" max="1000" step="10"/>
-
+                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                    </div>
                     <br/><br/> <br/>
-                     <span class="simple-text">Size(in KB)</span>
-                    <br/>
-
-                    <span class="simple-text">Minimum</span>
-
-                    <input type="number" value="500" min="0" max="1000" step="10"/>
-
-                    <span class="simple-text">Maximum</span>
-
-                    <input type="number" value="500" min="0" max="1000" step="10"/>
-                      <br/><br/> <br/>
-
-                      <span class="simple-text">Allowed Formats</span>
-                    <br/>
-                    <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label simple-text" for="exampleCheck1">JPG</label>
+                    <div id="widthConfig">
+                        <span class="simple-text">Width(in Pixel)</span>
                         <br/>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label simple-text" for="exampleCheck1">PNG</label>
-                        <br/><br/> <br/>
-                          <span class="simple-text">Others(Please Specify)</span>
-                        <br/>
-                        <input type="text">
-                        <br/><br/> <br/>
 
-                         <input type="button" value="Save" id="btnSubmit"/>
-  </div>
+                        <span class="simple-text">Minimum</span>
+
+                        <input type="number" value="500" min="0" max="1000" step="10"/>
+
+                        <span class="simple-text">Maximum</span>
+
+                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                    </div>
+                    <br/><br/> <br/>
+                    <div id="sizeConfig">
+                        <span class="simple-text">Size(in KB)</span>
+                        <br/>
+
+                        <span class="simple-text">Minimum</span>
+
+                        <input type="number" value="500" min="0" max="1000" step="10"/>
+
+                        <span class="simple-text">Maximum</span>
+
+
+                        <input type="number" value="500" min="0" max="1000" step="10"/>
+
+                    </div>
+                        </div>
+
+
+
+                    <input type="button" value="Save" id="btnSaveConfig"/>
+
 
                 </div>
 
