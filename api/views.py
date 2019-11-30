@@ -1,17 +1,14 @@
-from django.shortcuts import render
-
-from django import forms
-
-import api.photo_validator_dir  as photo_validator_dir
-import api.photo_validator as photo_validator
-from django.http import HttpResponse
 import logging
 
+from django import forms
+from django.http import HttpResponse
+from django.shortcuts import render
+
+import api.photo_validator as photo_validator
+import api.photo_validator_dir  as photo_validator_dir
 import api.tinkerdirectory as tinker
 from .models import Config
-import api.file_format_check as file_format_check
-import os
-from onlinePhotoValidator.settings import BASE_DIR
+
 
 # Create your views here.
 
@@ -32,8 +29,6 @@ def process_image(request):
 
     path = request.POST['path']
     type = request.POST['type']
-
-    message=""
 
     logging.info("Validating images from path: " + path)
     if type == 'folder':
@@ -69,7 +64,6 @@ def save_config(request):
     config.max_size = maxSize
     config.is_jpg='True' if jpgchecked == 'true' else  'False'
     config.is_png='True' if pngchecked == 'true' else  'False'
-    config.allowed_formats=othersFormat
 
     config.save()
 

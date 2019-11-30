@@ -137,7 +137,6 @@
                 data.append("maxSize", $("#maxSize").val());
                 data.append("jpgchecked", $("#jpgchecked").is(":checked"));
                 data.append("pngchecked", $("#pngchecked").is(":checked"));
-                data.append("othersFormatText", $("#othersFormatText").val());
 
 
                 //data.append("CustomField", "This is some extra data, testing");

@@ -10,6 +10,4 @@ class Config(models.Model):
     max_size = models.FloatField()
     is_jpg = models.BooleanField()
     is_png = models.BooleanField()
-    allowed_formats = models.TextField()
-
 
