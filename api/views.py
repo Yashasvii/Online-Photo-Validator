@@ -8,6 +8,7 @@ from django.http import HttpResponse
 import logging
 
 import api.tinkerdirectory as tinker
+from .models import Config
 import api.file_format_check as file_format_check
 import os
 from onlinePhotoValidator.settings import BASE_DIR
@@ -46,5 +47,11 @@ def dialogueBox(request):
     folderpath = tinker.opendialogForDirectory(request.POST['type'])
 
     return HttpResponse(folderpath)
+
+def save_config(request):
+    config = Config()
+    config.max_height = 1000000.00
+    config.save()
+
 
 

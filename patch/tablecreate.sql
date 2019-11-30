@@ -1,4 +1,4 @@
-CREATE TABLE config (
+CREATE TABLE api_config (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 min_height FLOAT,
 max_height FLOAT,
