@@ -49,9 +49,26 @@ def dialogueBox(request):
     return HttpResponse(folderpath)
 
 def save_config(request):
+
+    minHeight = request.POST['minHeight']
+    maxHeight = request.POST['maxHeight']
+    minWidth = request.POST['minWidth']
+    maxWidth= request.POST['maxWidth']
+    minSize= request.POST['minSize']
+    maxSize= request.POST['maxSize']
+
     config = Config()
-    config.max_height = 1000000.00
+    config.min_height = minHeight
+    config.max_height = maxHeight
+    config.min_width = minWidth
+    config.max_width = maxWidth
+    config.min_size = minSize
+    config.max_size = maxSize
+
     config.save()
+
+    return HttpResponse("aaaaa")
+
 
 
 

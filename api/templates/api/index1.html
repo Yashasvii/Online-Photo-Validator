@@ -95,6 +95,9 @@
                     </div>
 
 
+                     <form method="POST" enctype="multipart/form-data" id="fileUploadForm1">
+                                    {% csrf_token %}
+
 
                     <div id="configInput">
                     <div id="heightConfig">
@@ -102,12 +105,12 @@
                         <br/>
                         <span class="simple-text">Minimum: </span>
 
-                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10" id="minHeight"/>
 
                         <span class="simple-text">Maximum: </span>
 
 
-                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10" id="maxHeight"/>
                     </div>
                     <br/><br/> <br/>
                     <div id="widthConfig">
@@ -116,11 +119,11 @@
 
                         <span class="simple-text">Minimum: </span>
 
-                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10" id="minWidth" />
 
                         <span class="simple-text">Maximum: </span>
 
-                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10" id="maxWidth" />
                     </div>
                     <br/><br/> <br/>
                     <div id="sizeConfig">
@@ -129,16 +132,16 @@
 
                         <span class="simple-text">Minimum: </span>
 
-                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10" id="minSize" />
 
                         <span class="simple-text">Maximum: </span>
 
 
-                        <input type="number" value="500" min="0" max="1000" step="10"/>
+                        <input type="number" value="500" min="0" max="1000" step="10" id="maxSize" />
 
                     </div>
                         </div>
-                      <div id="allowedFormat">
+                    <div id="allowedFormat">
                         <span class="head-text">Allowed Formats</span>
                         <br/>
                         <div class="form-check">
@@ -154,11 +157,8 @@
                             <br/><br/> <br/>
                         </div>
                     </div>
-
-
-
                     <input type="button" value="Save" id="btnSaveConfig"/>
-
+                     </form>
 
                 </div>
 

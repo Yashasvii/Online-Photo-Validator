@@ -13,7 +13,7 @@
             }
         });
 
-            $("#uploadFolder").click(function (event) {
+        $("#uploadFolder").click(function (event) {
 
                 //stop submit the form, we will post it manually.
                 event.preventDefault();
@@ -62,7 +62,7 @@
 
             });
 
-            $("#btnSubmit").click(function (event) {
+        $("#btnSubmit").change(function (event) {
                 $("#result").html("Processing..").wrap('<pre />');
 
                 //stop submit the form, we will post it manually.
@@ -117,24 +117,26 @@
 
             });
 
-            $("#btnSaveConfig").click(function (event) {
+        $("#btnSaveConfig").click(function (event) {
 
                 //stop submit the form, we will post it manually.
                 event.preventDefault();
 
                 // Get form
-                var form = $('#fileUploadForm')[0];
+                var form = $('#fileUploadForm1')[0];
 
                 // Create an FormData object
                 var data = new FormData(form);
 
 
-                data.append("path", filePath);
+                data.append("minHeight", $("#minHeight").val());
+                data.append("maxHeight", $("#maxHeight").val());
+                data.append("minWidth", $("#minWidth").val());
+                data.append("maxWidth", $("#maxWidth").val());
+                data.append("minSize", $("#minSize").val());
+                data.append("maxSize", $("#maxSize").val());
 
 
-                data.append("type", type);
-
-                // If you want to add an extra field for the FormData
                 //data.append("CustomField", "This is some extra data, testing");
 
                 // disabled the submit button

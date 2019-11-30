@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c125f886-e824-4531-9b79-b3d3469892ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/head_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/head_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/api/js/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/api/js/logic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/templates/api/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/index1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
+    </list>
+    <list id="5aee3db0-be0a-48f1-843e-83d4f57d5303" name="do not puush" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,39 +19,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - ConfigDB@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/static/api/css/grayscale.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="170" column="7" lean-forward="true" selection-start-line="170" selection-start-column="7" selection-end-line="170" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/templates/api/index1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/head_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,161 +48,45 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>gray</find>
-      <find>text</find>
-      <find>about-sec</find>
-      <find>Onl</find>
-      <find>text-white-50 mx-auto</find>
-      <find>text-white</find>
-      <find>mx-auto</find>
-      <find>mt-2</find>
-      <find>mx-auto mt-2</find>
-      <find>bootstrap</find>
-      <find>title</find>
-      <find>Online Photo Validation System</find>
-      <find>mb-5</find>
-      <find>moz</find>
-      <find>uploadFolder</find>
-      <find>file</find>
-      <find>btnSubmit</find>
-      <find>.butt</find>
-      <find>fileUploadForm</find>
-      <find>Form</find>
-      <find>path</find>
-      <find>directory</find>
-      <find>aj</find>
-      <find>yashasvi</find>
-      <find>resul</find>
-      <find>Online</find>
-      <find>text-white-50</find>
-      <find>result</find>
-      <find>head</find>
-      <find>about</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/onlinePhotoValidator/urls.py" />
-        <option value="$PROJECT_DIR$/onlinePhotoValidator/settings.py" />
-        <option value="$PROJECT_DIR$/api/static/api/scss/_masthead.scss" />
-        <option value="$PROJECT_DIR$/api/static/api/css/grayscale.min.css" />
-        <option value="$PROJECT_DIR$/api/urls.py" />
-        <option value="$PROJECT_DIR$/api/static/api/scss/_signup.scss" />
-        <option value="$PROJECT_DIR$/api/static/api/css/grayscale.css" />
-        <option value="$PROJECT_DIR$/api/static/api/css/style.css" />
-        <option value="$PROJECT_DIR$/api/views.py" />
-        <option value="$PROJECT_DIR$/api/photo_validator_dir.py" />
-        <option value="$PROJECT_DIR$/api/static/api/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/api/templates/api/index1.html" />
-        <option value="$PROJECT_DIR$/api/head_check.py" />
-      </list>
-    </option>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="5" end1="6" start2="5" end2="6" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="7" end1="7" start2="7" end2="14" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="14" end1="14" start2="21" end2="40" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="16" end1="47" start2="42" end2="42" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="54" end1="88" start2="49" end2="49" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="92" end1="110" start2="53" end2="78" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="111" end1="117" start2="79" end2="80" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="118" end1="206" start2="81" end2="81" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="207" end1="207" start2="82" end2="83" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="210" end1="210" start2="86" end2="89" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="325" end1="325" start2="204" end2="224" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="331" end1="331" start2="230" end2="231" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="345" end1="345" start2="245" end2="251" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="367" end1="368" start2="273" end2="316" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="369" end1="372" start2="317" end2="317" changelist="5aee3db0-be0a-48f1-843e-83d4f57d5303" />
+        <range start1="381" end1="433" start2="326" end2="326" changelist="5aee3db0-be0a-48f1-843e-83d4f57d5303" />
+        <range start1="436" end1="436" start2="329" end2="342" changelist="5aee3db0-be0a-48f1-843e-83d4f57d5303" />
+        <range start1="439" end1="440" start2="345" end2="349" changelist="c125f886-e824-4531-9b79-b3d3469892ce" />
+        <range start1="442" end1="443" start2="351" end2="351" changelist="5aee3db0-be0a-48f1-843e-83d4f57d5303" />
+        <range start1="444" end1="740" start2="352" end2="353" changelist="5aee3db0-be0a-48f1-843e-83d4f57d5303" />
+      </ranges>
+    </file>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="95" />
-    <option name="y" value="34" />
-    <option name="width" value="1825" />
-    <option name="height" value="1046" />
-  </component>
+  <component name="ProjectId" id="1RNZA4EBl1xuTHVt5iHaWgqjGi7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="fontawesome-free" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="fontawesome-free" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="fontawesome-free" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="all.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="onlinePhotoValidator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinePhotoValidator" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api/static/api/img" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -323,12 +202,33 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7cabc745" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7cabc745" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7a911426" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c125f886-e824-4531-9b79-b3d3469892ce" name="Default Changelist" comment="" />
+      <changelist id="5aee3db0-be0a-48f1-843e-83d4f57d5303" name="do not puush" comment="" />
       <created>1567105222794</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -343,6 +243,12 @@
       <workItem from="1567442123594" duration="532000" />
       <workItem from="1567442682157" duration="17303000" />
       <workItem from="1567476354704" duration="2757000" />
+      <workItem from="1569509368013" duration="12409000" />
+      <workItem from="1569603949077" duration="4554000" />
+      <workItem from="1569675916397" duration="618000" />
+      <workItem from="1569820999932" duration="91000" />
+      <workItem from="1575093647969" duration="1183000" />
+      <workItem from="1575100029548" duration="11570000" />
     </task>
     <task id="LOCAL-00001" summary="refactor">
       <created>1567141223389</created>
@@ -365,7 +271,49 @@
       <option name="project" value="LOCAL" />
       <updated>1567460145291</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor">
+      <created>1569515693221</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569515693222</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor">
+      <created>1569522628521</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569522628521</updated>
+    </task>
+    <task id="LOCAL-00006" summary="css refactored">
+      <created>1569523188798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569523188798</updated>
+    </task>
+    <task id="LOCAL-00007" summary="css refactored">
+      <created>1569524567583</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569524567583</updated>
+    </task>
+    <task id="LOCAL-00008" summary="database works">
+      <created>1569610332867</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569610332867</updated>
+    </task>
+    <task id="LOCAL-00009" summary="db work update">
+      <created>1575117258591</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575117258591</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -437,7 +385,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="css refactored" />
+    <MESSAGE value="database works" />
+    <MESSAGE value="db work update" />
+    <option name="LAST_COMMIT_MESSAGE" value="db work update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/onlinePhotoValidator$views.coverage" NAME="views Coverage Results" MODIFIED="1567443660016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
