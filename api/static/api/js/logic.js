@@ -19,6 +19,8 @@
                 event.preventDefault();
 
                 $("#uploadFolder").prop("disabled", true);
+                $("#result").text("");
+                $("#selectedFolderText").text("");
 
                 // Get form
                 var form = $('#fileUploadForm')[0];
@@ -52,8 +54,10 @@
 
                         filePath = data;
                         $("#uploadFolder").prop("disabled", false);
-                        $("#btnSubmit").prop("disabled", false);
-                        $("#selectedFolderText").html(data + "/").wrap('<pre />');;
+                        if(data) {
+                            $("#btnSubmit").prop("disabled", false);
+                            $("#selectedFolderText").html(data + "/").wrap('<pre />');
+                        }
                     },
                     error: function (e) {
                           $("#uploadFolder").prop("disabled", false);
@@ -143,8 +147,6 @@
 
                 // disabled the submit button
 
-                $("#btnSubmit").prop("disabled", true);
-
                 $.ajax({
                     type: "POST",
                     enctype: 'multipart/form-data',
@@ -156,12 +158,6 @@
                     timeout: 600000,
                     success: function (data) {
 
-                        if(type === "file")
-                             $("#result").css("font-size","medium");
-
-                        $("#result").html(data).wrap('<pre />');;
-                        console.log("SUCCESS : ", data);
-                        $("#btnSubmit").prop("disabled", false);
 
                     },
                     error: function (e) {
