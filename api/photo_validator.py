@@ -31,7 +31,7 @@ def main(imgPath):
     logging.info(message)
 
     if not is_file_size_valid:
-        "Not Valid File Size"
+        return "Not Valid File Size"
 
     # Load the image
     img = cv2.imread(imgPath)
