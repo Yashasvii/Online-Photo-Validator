@@ -4,11 +4,10 @@ from .models import Config
 def check_image(path):
 	try:
 		config = Config.objects.all()[0]
-		print ("config==== ", config.allowed_formats)
 		img = Image.open(path)
 		format = img.format
 		print("format = " , format)
-		return format == 'JPEG' or format == 'PNG'
+		return (format == 'JPEG' and config.is_jpg) or (format == 'PNG' and config.is_png)
 	except IOError:
 		return False
 
