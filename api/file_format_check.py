@@ -1,7 +1,10 @@
 from PIL import Image
+from .models import Config
 
 def check_image(path):
 	try:
+		config = Config.objects.only()
+		#print ("config====", config.allowed_formats)
 		img = Image.open(path)
 		format = img.format
 		return format == 'JPEG' or format == 'PNG'

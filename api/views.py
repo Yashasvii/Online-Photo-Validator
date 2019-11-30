@@ -56,6 +56,9 @@ def save_config(request):
     maxWidth= request.POST['maxWidth']
     minSize= request.POST['minSize']
     maxSize= request.POST['maxSize']
+    jpgchecked= request.POST['jpgchecked']
+    pngchecked= request.POST['pngchecked']
+    othersFormat= request.POST['othersFormatText']
 
     config = Config()
     config.min_height = minHeight
@@ -64,6 +67,9 @@ def save_config(request):
     config.max_width = maxWidth
     config.min_size = minSize
     config.max_size = maxSize
+    config.is_jpg='True' if jpgchecked == 'true' else  'False'
+    config.is_png='True' if pngchecked == 'true' else  'False'
+    config.allowed_formats=othersFormat
 
     config.save()
 

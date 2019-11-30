@@ -5,5 +5,8 @@ max_height FLOAT,
 min_width FLOAT,
 max_width FLOAT,
 min_size FLOAT,
-max_size FLOAT
+max_size FLOAT,
+is_jpg   BOOLEAN,
+is_png   BOOLEAN,
+allowed_formats varchar(2555)
 )

@@ -51,8 +51,8 @@
                     success: function (data) {
 
                         filePath = data;
-                          $("#uploadFolder").prop("disabled", false);
-                              $("#btnSubmit").prop("disabled", false);
+                        $("#uploadFolder").prop("disabled", false);
+                        $("#btnSubmit").prop("disabled", false);
                         $("#selectedFolderText").html(data + "/").wrap('<pre />');;
                     },
                     error: function (e) {
@@ -62,7 +62,7 @@
 
             });
 
-        $("#btnSubmit").change(function (event) {
+        $("#btnSubmit").click(function (event) {
                 $("#result").html("Processing..").wrap('<pre />');
 
                 //stop submit the form, we will post it manually.
@@ -135,6 +135,9 @@
                 data.append("maxWidth", $("#maxWidth").val());
                 data.append("minSize", $("#minSize").val());
                 data.append("maxSize", $("#maxSize").val());
+                data.append("jpgchecked", $("#jpgchecked").is(":checked"));
+                data.append("pngchecked", $("#pngchecked").is(":checked"));
+                data.append("othersFormatText", $("#othersFormatText").val());
 
 
                 //data.append("CustomField", "This is some extra data, testing");
