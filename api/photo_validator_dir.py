@@ -57,6 +57,20 @@ def main(directory):
             copy(imagePath, invalidDirectory)
             continue
 
+        is_file_height_valid = file_size_check.check_height(imagePath)
+        if not is_file_height_valid:
+            messages.append("File height check failed")
+            error_message[image] = messages
+            copy(imagePath, invalidDirectory)
+            continue
+
+        is_file_width_valid = file_size_check.check_width(imagePath)
+        if not is_file_width_valid:
+            messages.append("File width check failed")
+            error_message[image] = messages
+            copy(imagePath, invalidDirectory)
+            continue
+
         # Load the image
         img = cv2.imread(imagePath)
 

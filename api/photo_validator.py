@@ -33,6 +33,22 @@ def main(imgPath):
     if not is_file_size_valid:
         return "Not Valid File Size"
 
+    # Check height of the image
+    is_file_height_valid = file_size_check.check_height(imgPath)
+    message = message + "File Height check: " + ('Passed' if is_file_height_valid else 'Failed') + "\n"
+    logging.info(message)
+
+    if not is_file_height_valid:
+        return "Not Valid File Height"
+
+  # Check width of the image
+    is_file_width_valid = file_size_check.check_width(imgPath)
+    message = message + "File Height check: " + ('Passed' if is_file_width_valid else 'Failed') + "\n"
+    logging.info(message)
+
+    if not is_file_width_valid:
+        return "Not Valid File Height"
+
     # Load the image
     img = cv2.imread(imgPath)
 

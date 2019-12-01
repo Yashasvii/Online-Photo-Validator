@@ -19,9 +19,8 @@ class NameForm(forms.Form):
 
 def startPage(request):
     context = {}
-
-
-    return render(request, 'api/index1.html', context)
+    config = Config.objects.all()[0]
+    return render(request, 'api/index1.html', {'config': config})
 
 def process_image(request):
 
