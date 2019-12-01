@@ -12,6 +12,8 @@
             } else {
                 $('#uploadFolder').prop("value", "Choose File ")
             }
+             $("#result").text("");
+             $("#selectedFolderText").text("");
         });
 
         $("#uploadFolder").click(function (event) {
