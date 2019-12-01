@@ -146,10 +146,11 @@
                         <span class="head-text">Allowed Formats</span>
                         <br/> <br/>
                         <div class="form-check" id="formatCheck">
-                            <input type="checkbox" class="form-check-input" id="jpgchecked">
+                            <input type="checkbox" class="form-check-input" id="jpgchecked"
+                                    {% if config.is_jpg %}CHECKED{% endif %}>
                             <label class="form-check-label simple-text" for="exampleCheck1">JPG</label>
                             <br/> <br/>
-                            <input type="checkbox" class="form-check-input" id="pngchecked">
+                            <input type="checkbox" class="form-check-input" id="pngchecked"  {% if config.is_png %}CHECKED{% endif %}>
                             <label class="form-check-label simple-text" for="exampleCheck1">PNG</label>
                             <br/>
                             <br/><br/> <br/>

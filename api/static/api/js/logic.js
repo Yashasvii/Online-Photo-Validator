@@ -4,6 +4,10 @@
 
         $(document).ready(function () {
 
+            // $('#jpgchecked').prop('checked', true);
+
+            alert("cccccccccccc")
+
 
         $('#categoryDropDown').change(function () {
             if ($(this).find("option:selected").val() === 'folder') {
